@@ -1,0 +1,14 @@
+<form method="post" action=".">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar</button>
+</form>
+
+
+<ul>
+    {% for pessoa in pessoas %}
+        <li>{{ pessoa.id}} - {{ pessoa }}</li>
+    {% empty %}
+        <li>Nenhum registro encontrado</li>
+    {% endfor %}
+</ul>
