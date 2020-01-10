@@ -21,5 +21,5 @@ from exemplo import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('update/<int:pessoa_id>/', views.index, name="pessoa_update"),
+    path('update/<int:pessoa_id>/', views.update, name='update_pessoa')
 ]

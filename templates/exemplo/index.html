@@ -7,7 +7,7 @@
 
 <ul>
     {% for pessoa in pessoas %}
-        <li>{{ pessoa.id}} - {{ pessoa }}</li>
+        <li>{{ pessoa.id}} - <a href={% url 'update_pessoa' pessoa_id=pessoa.id %}>{{ pessoa }}</a></li>
     {% empty %}
         <li>Nenhum registro encontrado</li>
     {% endfor %}
